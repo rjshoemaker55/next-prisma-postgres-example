@@ -24,7 +24,7 @@ const Header: React.FC = () => {
 
         a {
           text-decoration: none;
-          color: #000;
+          color: var(--geist-foreground);
           display: inline-block;
         }
 
@@ -70,10 +70,9 @@ const Header: React.FC = () => {
         `}</style>
       </div>
     )
-
     right = (
       <div className='right'>
-        <p>Valdiating session...</p>
+        <p>Validating session ...</p>
         <style jsx>{`
           .right {
             margin-left: auto;
@@ -87,7 +86,7 @@ const Header: React.FC = () => {
     right = (
       <div className='right'>
         <Link href='/api/auth/signin'>
-          <a data-active={isActive('/signup')}>Login</a>
+          <a data-active={isActive('/signup')}>Log in</a>
         </Link>
         <style jsx>{`
           a {
@@ -146,7 +145,6 @@ const Header: React.FC = () => {
         `}</style>
       </div>
     )
-
     right = (
       <div className='right'>
         <p>
@@ -154,7 +152,7 @@ const Header: React.FC = () => {
         </p>
         <Link href='/create'>
           <button>
-            <a>New Post</a>
+            <a>New post</a>
           </button>
         </Link>
         <button onClick={() => signOut()}>
